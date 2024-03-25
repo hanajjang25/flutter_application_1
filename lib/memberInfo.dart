@@ -13,7 +13,7 @@ class memberInfo extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                '회원정보',
+                '장하나 바보 멍청이',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
