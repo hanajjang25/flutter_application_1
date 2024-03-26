@@ -104,6 +104,19 @@ class memberInfo extends StatelessWidget {
                     borderRadius: BorderRadius.zero,
                     borderSide: BorderSide(color: Colors.black),
                   ),
+                  labelText: '기존 비밀번호',
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 70.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.zero,
+                    borderSide: BorderSide(color: Colors.black),
+                  ),
                   labelText: '비밀번호',
                   hintText: '※영어, 숫자, 특수문자 중 3종류 이상, 8자 이상',
                 ),
@@ -267,33 +280,36 @@ class memberInfo extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Text(
-                '사업자등록증',
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  OutlinedButton(
+            Row(
+              children: [
+                SizedBox(width: 10), // 왼쪽 여백
+                SizedBox(
+                  width: 100,
+                  height: 50,
+                  child: TextButton(
                     onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.resolveWith<Color>((states) {
+                        if (states.contains(MaterialState.disabled)) {
+                          return Colors.grey;
+                        }
+                        return Colors.transparent;
+                      }),
+                    ),
+                    child: Center(
+                      child: Text(
+                        '회원탈퇴',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
-                    child: Text('파일 업로드'),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             SizedBox(height: 10),
             Row(
