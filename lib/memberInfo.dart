@@ -48,14 +48,22 @@ class memberInfo extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.zero,
-                          borderSide: BorderSide(color: Colors.black),
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black), // 테두리 설정
+                        borderRadius: BorderRadius.zero,
+                        color: Colors.grey.withOpacity(0.1), // 비활성 상태일 때의 배경색
+                      ),
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 8.0), // 내부 패딩 설정
+                        child: Text(
+                          '아이디',
+                          style: TextStyle(
+                            color: Colors.grey, // 텍스트 색상 설정
+                          ),
                         ),
-                        labelText: '아이디',
-                        hintText: '※아이디는 한번 설정 후 변경이 불가능합니다.',
                       ),
                     ),
                   ),
@@ -67,13 +75,15 @@ class memberInfo extends StatelessWidget {
                       onPressed: () {},
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.resolveWith<Color>((states) {
-                          // 버튼의 배경색 지정
-                          if (states.contains(MaterialState.disabled)) {
-                            return Colors.grey; // 비활성 상태일 때 배경색
-                          }
-                          return Colors.transparent; // 활성 상태일 때 배경색
-                        }),
+                            MaterialStateProperty.resolveWith<Color>(
+                          (states) {
+                            // 버튼의 배경색 지정
+                            if (states.contains(MaterialState.disabled)) {
+                              return Colors.grey; // 비활성 상태일 때 배경색
+                            }
+                            return Colors.transparent; // 활성 상태일 때 배경색
+                          },
+                        ),
                         shape: MaterialStateProperty.all<OutlinedBorder>(
                           RoundedRectangleBorder(
                             side: BorderSide(color: Colors.black), // 테두리 설정
