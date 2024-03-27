@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class StartPage extends StatelessWidget {
   @override
@@ -7,8 +8,7 @@ class StartPage extends StatelessWidget {
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text('Waitez'),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
             children: [
               TextButton(
                   onPressed: () {
@@ -35,6 +35,11 @@ class StartPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/findID');
                   },
                   child: Text('아이디찾기')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/findPassword');
+                  },
+                  child: Text('비밀번호찾기')),
             ],
           ),
         ]),
