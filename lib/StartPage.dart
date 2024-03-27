@@ -40,6 +40,11 @@ class StartPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/findPassword');
                   },
                   child: Text('비밀번호찾기')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/regRestaurant');
+                  },
+                  child: Text('음식점 등록')),
             ],
           ),
         ]),

@@ -7,6 +7,7 @@ import 'signup.dart';
 import 'memberInfo.dart';
 import 'findID.dart';
 import 'findPassword.dart';
+import 'regRestaurant.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/memberInfo': (context) => memberInfo(),
         '/findID': (context) => findID(),
         '/findPassword': (context) => findPassword(),
+        '/regRestaurant': (context) => regRestaurant(),
       },
     );
   }
