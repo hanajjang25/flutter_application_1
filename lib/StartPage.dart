@@ -30,6 +30,11 @@ class StartPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/memberInfo');
                   },
                   child: Text('회원정보')),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/findID');
+                  },
+                  child: Text('아이디찾기')),
             ],
           ),
         ]),

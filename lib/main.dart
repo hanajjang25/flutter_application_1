@@ -5,6 +5,7 @@ import 'login.dart';
 import 'nonMember.dart';
 import 'signup.dart';
 import 'memberInfo.dart';
+import 'findID.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/c': (context) => nonMember(),
         '/signup': (context) => signup(),
         '/memberInfo': (context) => memberInfo(),
+        '/findID': (context) => findID(),
       },
     );
   }
