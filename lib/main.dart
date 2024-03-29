@@ -8,6 +8,7 @@ import 'memberInfo.dart';
 import 'findID.dart';
 import 'findPassword.dart';
 import 'regRestaurant.dart';
+import 'restaurantInfo.dart';
 
 void main() => runApp(MyApp());
 
